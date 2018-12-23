@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>	
+	<style type="text/css">
+/* body{
+	background-image: linear-gradient(#a9cbf2, #3eafec);
+} */
+hr{
+	color: #f5c34a !important;
+}
+
+.img {
+	width: 40%;
+}
+.btn {
+	margin-top: 5px;
+}
+	</style>
+
+</head>
+<body>
+  
+		<div class="container-fluid">
+			<div class="header">
+				<nav class="navbar navbar-inverse">
+				  <div class="container-fluid">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>                        
+				      </button>
+				      <a class="navbar-brand" href="#/">ВЫЙТИ</a>
+				    </div>
+				    <div class="collapse navbar-collapse" id="myNavbar">
+				      <ul class="nav navbar-nav">
+				        <li class="active"><a href="">Home</a></li>
+				      </ul>
+				      <ul class="nav navbar-nav navbar-right">
+				        <li><button class="btn btn-md btn-active" ng-click="goAdminPage()" ui-sref="homes">Войти</button></li>
+				      </ul>
+				    </div>
+				  </div>
+				</nav>
+			</div>
+			<div class="row">
+				<div class="col-md-5">
+					<img style="margin-left: 20px" src="image/clothes.png">
+				</div>
+				<div class="col-md-2">
+					<img src="image/rubl.jpg" ><br/>
+					<label>Цены от производителя</label>
+				</div>
+				<div class="col-md-3">
+					<img src="image/dostavka.jpg" ><br/>
+					<label>Бесплатная доставка</label>
+				</div>
+				<div class="col-md-2">
+					<img src="image/tel.PNG" ><br/>
+					<a style="float: right; cursor: pointer;color: #f5c34a">Перезвоните мне</a>
+				</div>
+			</div>
+			<hr>
+						<table class="table table-striped table-bordered table-container speaker-list" style="border-radius: 5px; border-color: blue;width: 100%">
+							<tbody class="tbody-center ">
+								<tr ng-repeat="tab in list">
+									<td width="10%" style="text-align: center"><button class="btn btn-md btn-success" style="margin-bottom: 3px">Цена: {{tab.price}}</button><br /><div><img class="img" src="image/{{tab.image}}"></img></div><br/> <label>{{tab.text}}</label><br/></td>
+								</tr>
+								<tr ng-if="list.length === 0">
+									<td colspan="5" style="text-align: center">Нет данных</td>
+								</tr>
+							</tbody>
+						</table>
+		
+
+  </div>
+</body>
+</html>
